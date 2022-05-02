@@ -21,8 +21,14 @@ class AddRemoveElementsPage:
     def clickDeleteButton(self):
         self.browser.find_element(*self.DELETE_BUTTON).click()
 
+    def clickFirstDeleteButton(self):
+        self.browser.find_element(*self.DELETE_BUTTON).click()
+
     def isDeleteButtonDisplayed(self):
         return self.browser.find_element(*self.DELETE_BUTTON).is_displayed()
+
+    def isAddButtonDisplayed(self):
+        return self.browser.find_element(*self.ADD_ELEMENT_BUTTON).is_displayed()
 
     def getTitlePage(self):
         return self.browser.find_element(*self.TITLE_TEXT).text
